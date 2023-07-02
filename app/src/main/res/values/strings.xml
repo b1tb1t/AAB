@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AAB</string>
+    <string name="service_label">AABService</string>
+</resources>
