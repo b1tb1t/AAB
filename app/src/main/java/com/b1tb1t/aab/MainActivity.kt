@@ -34,7 +34,6 @@ class MainActivity : ComponentActivity() {
         super.onResume()
         //startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
         //连续启动Service
-        //连续启动Service
         val intentOne = Intent(this, AabAccessibilityService::class.java)
         startService(intentOne)
     }
