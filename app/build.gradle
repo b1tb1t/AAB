@@ -47,7 +47,8 @@ android {
 }
 
 dependencies {
-
+    // To use OpenMP variant:
+    implementation 'cz.adaptech.tesseract4android:tesseract4android-openmp:4.7.0'
     implementation 'androidx.core:core-ktx:1.13.0'
     implementation platform('org.jetbrains.kotlin:kotlin-bom:1.9.23')
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
