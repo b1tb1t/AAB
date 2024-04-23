@@ -13,13 +13,15 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.b1tb1t.aab.layout.Greeting222
+import com.b1tb1t.aab.layout.Greeting
 import com.b1tb1t.aab.service.AabAccessibilityService
 import com.b1tb1t.aab.ui.theme.AdbTheme
 import com.googlecode.tesseract.android.TessBaseAPI
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
+import org.pytorch.Device;
+import org.pytorch.Module
 
 
 class MainActivity : ComponentActivity() {
@@ -37,7 +39,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting222("Android")
+                    Greeting("Android")
                 }
             }
         }
@@ -51,7 +53,10 @@ class MainActivity : ComponentActivity() {
         //startService(intentOne)
 
         val bitmapFromAssets: Bitmap? = getBitmapFromAssets(this@MainActivity, "test1.png")
-        recognizeTextFromBitmap(bitmapFromAssets)
+        //recognizeTextFromBitmap(bitmapFromAssets)
+        //Device.VULKAN
+        // https://pytorch.org/tutorials/prototype/vulkan_workflow.html
+        //val module = Module.load("$PATH", Device.VULKAN)
     }
 
     private fun getBitmapFromAssets(context: Context, filename: String): Bitmap? {
